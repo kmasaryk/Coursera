@@ -7,10 +7,10 @@ bl br
 """
 
 # just for testing - remove when done
-import sys
-import os
-import time
-import copy
+#import sys
+#import os
+#import time
+#import copy
 
 PAUSE_AFTER_MOVE = False
 PRINT_MSGS = False
@@ -469,7 +469,7 @@ def solve_left(p1, p2):
 
 def solution(position):
     global tiles
-    tiles = copy.deepcopy(position)
+    tiles = position[:]
     
     # We solve positions in pairs.
     soln_pairs = [(1, 2), (3, 4), (5, 6), (7, 8), (9, 13), (10, 14), (11, 15)]
@@ -482,8 +482,8 @@ def solution(position):
 
     return moves
             
-position = [0, 15, 1, 4, 5, 6, 10, 8, 9, 7, 3, 14, 13, 2, 11, 12]
-print(solution(position))
+#position = [0, 15, 1, 4, 5, 6, 10, 8, 9, 7, 3, 14, 13, 2, 11, 12]
+#print(solution(position))
 #print(f"moves = {moves}")
 
 
